@@ -36,12 +36,22 @@ post "/post/new" do
   data.body = params[:body]
   
   if(data.save)
-    @message = "Your post was saved."
+    @message = "Your new post was saved."
   else
-    @message = "Your post was NOT saved."
+    @message = "Your new post was NOT saved."
   end
   
   erb :new
+end
+
+get "/post/edit/:id" do
+  @post = Post.get(params[:id])
+  erb :edit
+end
+
+post "/post/edit/:id" do
+  
+  erb :edit
 end
   
 get "/post/:id" do

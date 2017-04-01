@@ -13,7 +13,7 @@
       <td><%= Post.body %></td>
       <td class="text-right">
       <a href="./post/<%= Post.id %>" class="btn btn-secondary btn-sm">View</a>
-      <a href="./post/<%= Post.id %>" class="btn btn-secondary btn-sm">Edit</a> 
+      <a href="./post/edit/<%= Post.id %>" class="btn btn-secondary btn-sm">Edit</a> 
       <a href="./post/delete/<%= Post.id %>" class="btn btn-danger btn-sm" onClick="return confirm('Are you sure you want to delete?');">Delete</a>
       </td>
       </tr>
