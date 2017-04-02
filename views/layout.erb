@@ -1,18 +1,19 @@
 <html>
       <head>
-            <title>Page Title</title>
-      		<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-			<script src="../../assets/js/bootstrap.min.js"></script>
+            <title><%= @pageTitle %></title>
+            <base href="http://localhost:4567">
+      	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+		<script src="./assets/js/app.js"></script>
+            <script src="./assets/js/bootstrap.min.js"></script>
       </head>
       <body class="container">
-		<% if @message %>
-		<div class="alert alert-info" role="alert"><%= @message %></div>
-		<% end -%>
+
+            <a href="./" class="btn btn-secondary">Home</a>  
+            <a href="./post" class="btn btn-secondary">Index</a>  
+            <a href="./post/new" class="btn btn-secondary">New</a> 
+            <br/>
+            <br/>
       
-      <br/>
-      <a href="../../" class="btn btn-secondary">Home</a>  <a href="../../post" class="btn btn-secondary">Index</a>  <a href="../../post/new" class="btn btn-secondary">New</a> 
-      <br/>
-      <br/>
-           <%= yield %>
+            <%= yield %>
       </body>
 <html>

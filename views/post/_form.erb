@@ -1,5 +1,5 @@
 <form method="POST">
-  <p><input type="text" name="title" placeholder="Title" class="form-control" value="<%= @post.title if defined?(@post.title) %>" /></p>
+  <p><input type="text" name="title" placeholder="Title" class="form-control" value="<%= @post.title if defined?(@post.title) %>"/></p>
   <p><input type="text" name="slug" placeholder="Slug" class="form-control" value="<%= @post.slug if defined?(@post.title) %>"/></p>
   <p><textarea name="body" placeholder="Body" class="form-control"><%= @post.body if defined?(@post.body) %></textarea></p>
   <p><input type="submit" value="Save" class="btn btn-primary" /></p>
