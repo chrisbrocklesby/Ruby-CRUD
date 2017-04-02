@@ -7,14 +7,12 @@ DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/database.db")
 class Post
   include DataMapper::Resource
   property :id, Serial
-  property :title, String
-  property :slug, String
-  property :body, Text
+  property :title, String, :required => true
+  property :slug, String, :required => true
+  property :body, Text, :required => true
 end
 
-DataMapper.finalize
-
-Post.auto_upgrade!
+DataMapper.finalize.auto_upgrade!
 
 get "/" do
   erb :home
@@ -50,10 +48,21 @@ get "/post/edit/:id" do
 end
 
 post "/post/edit/:id" do
+  data = Post.get(params[:id]).update(
+    :title => params[:title], 
+    :slug => params[:slug], 
+    :body => params[:body]
+  )
   
-  erb :edit
+  if(data)
+    @message = "Your new post was updated."
+  else
+    @message = "Your new post was NOT updated."
+  end
+
+  redirect('/post')
 end
-  
+
 get "/post/:id" do
   @post = Post.get(params[:id])
   erb :view
