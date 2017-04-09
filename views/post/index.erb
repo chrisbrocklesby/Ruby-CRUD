@@ -1,10 +1,15 @@
 <h1>Index</h1>
 <table class="table table-hover">
+<thead>
+    <tr>
 	<th>ID</th>
 	<th>Title</th>
 	<th>Body</th>
 	<th>Slug</th>
 	<th class="text-right">Options</th>
+	</tr>
+</thead>
+<tbody>
 	<% for Post in @posts %>
 	<tr>
 		<td><%= Post.id %></td>
@@ -18,4 +23,5 @@
 		</td>
 	</tr>
 	<% end %>  
+</tbody>
 </table>
