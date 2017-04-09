@@ -1,0 +1,22 @@
+/*////// Validation //////*/
+textarea:valid,
+input:valid[type=text],
+input:valid[type=url],
+input:valid[type=tel],
+input:valid[type=number],
+input:valid[type=color],
+input:valid[type=email] {
+	background-color: #ddffdd;
+}
+
+textarea:invalid,
+input:invalid[type=text],
+input:invalid[type=url],
+input:invalid[type=tel],
+input:invalid[type=number],
+input:invalid[type=color],
+input:invalid[type=email] {
+	background-color: #ffdddd;
+}
+
+/*////// Custom //////*/

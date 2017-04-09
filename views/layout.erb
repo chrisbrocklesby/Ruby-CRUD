@@ -1,13 +1,22 @@
-<html>
+<!doctype html>
+<html lang="en">
       <head>
-            <title><%= @pageTitle %></title>
+            <meta charset="utf-8">
+            <meta name="description" content="Description of page">
+            <meta name="author" content="Chris Brocklesby">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
             <base href="http://localhost:4567">
+            
+            <title><%= @pageTitle %></title>
+            
       	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-		<script src="./assets/js/app.js"></script>
-            <script src="./assets/js/bootstrap.min.js"></script>
-      </head>
-      <body class="container">
+            <link rel="stylesheet" href="./assets/css/style.css">
 
+            <script src="./assets/js/bootstrap.min.js" async></script>
+            <script src="./assets/js/app.js" async></script>
+      </head>
+
+      <body class="container">
             <a href="./" class="btn btn-secondary">Home</a>  
             <a href="./post" class="btn btn-secondary">Index</a>  
             <a href="./post/new" class="btn btn-secondary">New</a> 
