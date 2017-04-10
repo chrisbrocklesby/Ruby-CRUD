@@ -1,22 +1,28 @@
 /*////// Validation //////*/
-textarea:valid,
-input:valid[type=text],
-input:valid[type=url],
-input:valid[type=tel],
-input:valid[type=number],
-input:valid[type=color],
-input:valid[type=email] {
-	background-color: #ddffdd;
+
+
+textarea:invalid:not(:focus),
+input:invalid[type=text]:not(:focus),
+input:invalid[type=url]:not(:focus),
+input:invalid[type=tel]:not(:focus),
+input:invalid[type=number]:not(:focus),
+input:invalid[type=color]:not(:focus),
+input:invalid[type=email]:not(:focus) {
+	color: #fc263d;
+	border: 2px solid #fc263d;
+	text-decoration: underline;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  	transform: translate3d(0, 0, 0);
+  	backface-visibility: hidden;
+  	perspective: 1000px;
 }
 
-textarea:invalid,
-input:invalid[type=text],
-input:invalid[type=url],
-input:invalid[type=tel],
-input:invalid[type=number],
-input:invalid[type=color],
-input:invalid[type=email] {
-	background-color: #ffdddd;
+/*////// Animations //////*/
+@keyframes shake {
+	10%, 90% {transform: translate3d(-1px, 0, 0)}
+	20%, 80% {transform: translate3d(2px, 0, 0)}
+	30%, 50%, 70% {transform: translate3d(-4px, 0, 0)}
+	40%, 60% {transform: translate3d(4px, 0, 0)}
 }
 
 /*////// Custom //////*/

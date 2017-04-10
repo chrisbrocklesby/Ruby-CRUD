@@ -1,11 +1,11 @@
-<form method="POST">
+<form method="POST" id="myForm">
 	<p>
 	<input type="text" name="title" placeholder="Title" class="form-control" 
 	value="<%= @post.title if defined?(@post.title) %>" pattern="https?://.+" required />
 	</p>
 	<p>
 	<input type="text" name="slug" placeholder="Slug" class="form-control" 
-	value="<%= @post.slug if defined?(@post.title) %>" pattern="[a-zA-Z0-9]+" />
+	value="<%= @post.slug if defined?(@post.title) %>" pattern="[a-zA-Z0-9]+" required />
 	</p>
 	<p>
 	<textarea name="body" placeholder="Body" class="form-control"><%= @post.body if defined?(@post.body) %></textarea>
