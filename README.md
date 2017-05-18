@@ -1,2 +1,3 @@
 # Ruby-CRUD
-A Ruby CRUD template using Sinatra and SQLite
+
+A really basic Ruby CRUD base example using Sinatra and SQLite...
