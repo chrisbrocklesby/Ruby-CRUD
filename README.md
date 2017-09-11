@@ -1,6 +1,6 @@
 # Ruby-CRUD
 
-A really basic Ruby CRUD base example using Sinatra and SQLite...
+A really basic Ruby CRUD base example using Sinatra and (DataMapper) SQLite...
 
 ```ruby
 ###### Required #######
